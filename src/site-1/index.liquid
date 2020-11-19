@@ -1,0 +1,29 @@
+---
+title: Site 1
+# layout: layouts/base.liquid
+layout: base
+---
+
+<h1>I'm {{ title }}!</h1>
+
+<p>Site copy for {{ title }}.</p>
+
+<main>
+  <p>Testing [proxying] global `_data/` directory</p>
+  <p>Magnum PI cast:</p>
+  <ul>
+    {% for name in names -%}
+    <li>{{ name }}</li>
+    {%- endfor %}
+  </ul>
+</main>
+
+<aside>
+  <p>Testing local/relative `_data/` directory</p>
+  <p>{{ foo.name }}</p>
+</aside>
+
+<aside>
+  <p>Testing global banner filter</p>
+  {{ "" | banner }}
+</aside>
